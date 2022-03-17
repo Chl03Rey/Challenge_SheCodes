@@ -2,12 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Challenge GitHub</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
   </head>
   <body>
+          <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="searchForm">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="text"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control shadow-sm"
+                id="city-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            
+                <button class="btn btn-success w-100" id="current-location-button">
+            Current
+          </button>
+            </div>
+          </div>
+        </form>
+        <h1 id="cityDisplay">
+          Sydney NSW, Australia
+        </h1>
+        <ul>
+          <li id="currentDate">
+            Wednesday 22:00
+          </li>
+          <li class="infoWeather" id="descriptionWeather">
+            Partly Cloudy
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Cloudy icon"
+                class="weather-icon float-left"
+              />
+              <div class="float-left">
+                <span class="temperature">19</span
+                ><span class="units">
+                  <span id="celciusTemp">°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li >
+                Feels like: <span id="feelsTemperature">17</span>°C
+              </li >
+              <li >
+                Humidity: <span id="humidityInfo">77</span>%
+              </li>
+              <li>
+                Wind: <span id="windInfo">8</span>km/h
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
